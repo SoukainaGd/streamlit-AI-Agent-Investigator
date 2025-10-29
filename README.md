@@ -51,12 +51,12 @@ It automates **open-source intelligence (OSINT)** research using AI agents that 
 
 ### 🧰 Tech Stack
 
-* **Python 3.10+**
-* **Streamlit** — interactive web app interface
-* **CrewAI** — multi-agent orchestration
-* **OpenAI API** — LLM reasoning & analysis
-* **SerpAPI** — web search integration
-* **dotenv** — secure API key management
+*  **Python 3.10+**
+*  **Streamlit** — interactive web app interface
+*  **CrewAI** — multi-agent orchestration
+*  **OpenAI API** — LLM reasoning & analysis
+*  **SerpAPI** — web search integration
+*  **dotenv** — secure API key management
 
 ---
 
@@ -132,5 +132,3 @@ AI & Data Science Researcher | OSINT Automation Enthusiast
 This tool uses publicly available information and AI-generated analysis.
 It does **not** make legal or definitive claims — always verify results manually.
 The purpose of this project is **transparency and responsible AI investigation**.
-
-
