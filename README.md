@@ -34,6 +34,7 @@ It automates open-source intelligence (OSINT) research using AI agents that sear
     "timestamp": "2024-08-08T00:00:00Z"
   }
 ]
+
 ⚙️ How It Works
 
 The user enters a company name (e.g., “Nestlé”, “Microsoft”, “L’Oréal”).
