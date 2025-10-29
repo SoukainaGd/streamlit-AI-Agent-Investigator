@@ -1,18 +1,24 @@
-# agents/researcher_agent.py
 from crewai import Agent, LLM
 from crewai.tools import tool
-from tools.web_search_tool import search_web   # use the tool you already built
+from tools.web_search_tool import search_web
 from dotenv import load_dotenv
-import os
+import os, time
 
+# Load .env locally (Streamlit Cloud ignores this if secrets are set)
 load_dotenv()
 
-from crewai import LLM
-import time
+# ✅ Force environment variables from Streamlit secrets if present
+if "GROQ_API_KEY" in os.environ:
+    os.environ["GROQ_API_KEY"] = os.environ["GROQ_API_KEY"]
+if "SERPAPI_API_KEY" in os.environ:
+    os.environ["SERPAPI_API_KEY"] = os.environ["SERPAPI_API_KEY"]
 
 def create_llm_with_retry(model="groq/llama-3.1-8b-instant", retries=3, delay=5):
     for attempt in range(retries):
         try:
+            # Make sure API key is available before initializing
+            if not os.getenv("GROQ_API_KEY"):
+                raise ValueError("❌ GROQ_API_KEY is missing.")
             return LLM(model=model, temperature=0.2)
         except Exception as e:
             if "rate_limit_exceeded" in str(e).lower():
@@ -22,23 +28,3 @@ def create_llm_with_retry(model="groq/llama-3.1-8b-instant", retries=3, delay=5)
             else:
                 raise
     raise RuntimeError("LLM initialization failed after retries")
-
-llm = create_llm_with_retry()
-
-
-@tool("Research Tool")
-def research_tool(query: str, top: int = 6):
-    """
-    Searches the web using SerpAPI and returns URLs, titles, and snippets.
-    """
-    return search_web.run(query, num_results=top)
-
-
-researcher_agent = Agent(
-    role="Open-source researcher",
-    goal="Collect and summarize verifiable public information with citations.",
-    backstory="Expert OSINT analyst focused on transparency and sourcing.",
-    llm=llm,
-    tools=[research_tool],
-    verbose=True
-)
