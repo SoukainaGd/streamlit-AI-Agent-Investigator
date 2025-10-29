@@ -33,7 +33,7 @@ It automates open-source intelligence (OSINT) research using AI agents that sear
     "confidence": 0.9,
     "timestamp": "2024-08-08T00:00:00Z"
   }
-]
+
 
 ⚙️ How It Works
 
