@@ -51,12 +51,12 @@ It automates **open-source intelligence (OSINT)** research using AI agents that 
 
 ### 🧰 Tech Stack
 
- **Python 3.10+**
- **Streamlit** — interactive web app interface
- **CrewAI** — multi-agent orchestration
- **OpenAI API** — LLM reasoning & analysis
- **SerpAPI** — web search integration
- **dotenv** — secure API key management
+* **Python 3.10+**
+* **Streamlit** — interactive web app interface
+* **CrewAI** — multi-agent orchestration
+* **OpenAI API** — LLM reasoning & analysis
+* **SerpAPI** — web search integration
+* **dotenv** — secure API key management
 
 ---
 
@@ -122,7 +122,7 @@ streamlit run app.py
 ### 👩‍💻 Author
 
 **Soukaina Gadir**
-AI & Data Science Researcher
+AI & Data Science Researcher | OSINT Automation Enthusiast
 📍 [GitHub: @SoukainaGd](https://github.com/SoukainaGd)
 
 ---
