@@ -1,0 +1,26 @@
+# === Core CrewAI packages ===
+crewai==1.2.1
+crewai-tools>=0.11.0
+
+# === Environment & API keys ===
+python-dotenv>=1.0.1
+
+# === Web access & parsing ===
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# === Search API (SerpAPI / Google) ===
+google-search-results>=2.4.2
+
+# === Document & PDF text extraction ===
+pdfminer.six>=20231228
+PyPDF2>=3.0.1
+
+# === Data handling ===
+pandas>=2.2.0
+
+# === Progress bars (optional but handy) ===
+tqdm>=4.66.0
+
+# === LLM provider ===
+openai>=1.30.0
