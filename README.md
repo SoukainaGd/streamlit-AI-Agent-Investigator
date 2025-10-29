@@ -35,6 +35,8 @@ It automates open-source intelligence (OSINT) research using AI agents that sear
   }
 ]
 
+```
+
 ⚙️ How It Works
 
 The user enters a company name (e.g., “Nestlé”, “Microsoft”, “L’Oréal”).
