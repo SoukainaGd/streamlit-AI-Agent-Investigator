@@ -1,24 +1,35 @@
 # 🕵️‍♀️ AI Agent Investigator
 
-**AI Agent Investigator** is a Streamlit-based multi-agent system that investigates companies for potential relationships with defense contractors, military suppliers, or activities related to geopolitical conflicts — such as the military invasion in **Gaza and the West Bank**.
+### 🔍 Overview
 
-It automates open-source intelligence (OSINT) research using AI agents that search, analyze, and verify publicly available information.
+**AI Agent Investigator** is a Streamlit-based multi-agent OSINT system that investigates companies for potential relationships with defense contractors, military suppliers, or activities related to geopolitical conflicts — such as the military invasion in **Gaza and the West Bank**.
 
----
-
-## 🚀 Features
-
-- 🔍 **Automated OSINT Research** — Collects and summarizes public information about a given company.  
-- 🤖 **Multi-Agent Architecture**  
-  - **Researcher Agent:** Finds and summarizes data from verified sources.  
-  - **Verifier Agent:** Cross-checks claims against multiple primary sources and assigns confidence levels.  
-- 🌍 **Context Awareness** — Focus on military, defense, and geopolitical contexts (e.g., Gaza/West Bank).  
-- 📄 **JSON Output** — Returns clean, structured findings with source citations.  
-- 💾 **Download Results** — Export your investigation as a `.json` file.  
+It automates **open-source intelligence (OSINT)** research using AI agents that search, analyze, and verify publicly available information.
 
 ---
 
-## 🧠 Example Output
+### 🧩 What’s Included
+
+* Automated **OSINT research** using AI agents
+* **Researcher Agent** → finds and summarizes verified public data
+* **Verifier Agent** → cross-checks claims and assigns confidence levels
+* Context focus on **defense, military, and geopolitical links**
+* Outputs results as structured **JSON**
+* Export findings as downloadable `.json` reports
+
+---
+
+### ⚙️ How It Works
+
+1. The user enters a company name (e.g., `Nestlé`, `Microsoft`, `L’Oréal`).
+2. The **Researcher Agent** searches the web (via SerpAPI) for public reports and documents.
+3. The **Verifier Agent** checks evidence across multiple primary sources.
+4. The system generates structured claims and confidence scores.
+5. Results are displayed in Streamlit and can be downloaded as JSON.
+
+---
+
+### 🧠 Example Output
 
 ```json
 [
@@ -34,85 +45,92 @@ It automates open-source intelligence (OSINT) research using AI agents that sear
     "timestamp": "2024-08-08T00:00:00Z"
   }
 ]
-
 ```
 
-⚙️ How It Works
+---
 
-The user enters a company name (e.g., “Nestlé”, “Microsoft”, “L’Oréal”).
-The Researcher Agent uses web search tools (SerpAPI) to gather relevant evidence.
-The Verifier Agent cross-checks the findings and assigns confidence levels.
-The app outputs structured claims and allows exporting results as JSON.
+### 🧰 Tech Stack
 
-🧩 Tech Stack
+* 🐍 **Python 3.10+**
+* 🎨 **Streamlit** — interactive web app interface
+* 🧠 **CrewAI** — multi-agent orchestration
+* 💬 **OpenAI API** — LLM reasoning & analysis
+* 🌐 **SerpAPI** — web search integration
+* 🔒 **dotenv** — secure API key management
 
-Python 3.10+
+---
 
-Streamlit – Interactive UI
+### 🛠 Setup Instructions (Local)
 
-CrewAI – Multi-agent orchestration
+**1. Clone the repository**
 
-OpenAI API – LLM reasoning & analysis
-
-SerpAPI – Web search integration
-
-dotenv – Secure API key management
-
-🛠 Setup Instructions (Local)
-
-Clone the repository
-
+```bash
 git clone https://github.com/SoukainaGd/streamlit-AI-Agent-Investigator.git
 cd streamlit-AI-Agent-Investigator
+```
 
+**2. Create a virtual environment**
 
-Create a virtual environment
-
+```bash
 python -m venv venv
-source venv/bin/activate   # (Mac/Linux)
-venv\Scripts\activate      # (Windows)
+source venv/bin/activate   # Mac/Linux  
+venv\Scripts\activate      # Windows
+```
 
+**3. Install dependencies**
 
-Install dependencies
-
+```bash
 pip install -r requirements.txt
+```
 
+**4. Create a `.env` file**
 
-Create a .env file
-
-OPENAI_API_KEY=your_openai_api_key_here
+```bash
+OPENAI_API_KEY=your_openai_api_key_here  
 SERPAPI_API_KEY=your_serpapi_api_key_here
+```
 
+**5. Run the app**
 
-Run the app
-
+```bash
 streamlit run app.py
+```
 
-☁️ Streamlit Cloud Deployment
+---
 
-You can deploy this app to Streamlit Cloud.
-After connecting your GitHub repo, go to:
-Settings → Secrets and add:
+### ☁️ Streamlit Cloud Deployment
 
-OPENAI_API_KEY = "your_openai_api_key_here"
-SERPAPI_API_KEY = "your_serpapi_api_key_here"
+1. Connect your GitHub repo to Streamlit Cloud.
+2. Go to **Settings → Secrets** and add your keys:
 
-🧭 Example Use Cases
+   ```
+   OPENAI_API_KEY = your_openai_api_key_here  
+   SERPAPI_API_KEY = your_serpapi_api_key_here
+   ```
+3. Streamlit will auto-deploy your app from `app.py`.
 
-Investigate if a company has defense contracts
+---
 
-Track partnerships linked to military or surveillance operations
+### 🧭 Example Use Cases
 
-Examine supply chains with geopolitical implications
+* Investigate if a company has **defense contracts**
+* Track partnerships linked to **military or surveillance** operations
+* Examine **supply chains** with geopolitical implications
 
-👩‍💻 Author
+---
 
-Soukaina Gadir
+### 👩‍💻 Author
+
+**Soukaina Gadir**
 AI & Data Science Researcher | OSINT Automation Enthusiast
-📍 GitHub: @SoukainaGd
+📍 [GitHub: @SoukainaGd](https://github.com/SoukainaGd)
 
-⚖️ Disclaimer
+---
+
+### ⚖️ Disclaimer
 
 This tool uses publicly available information and AI-generated analysis.
-It does not make legal or definitive claims — always verify results manually.
-The purpose of this project is transparency and responsible AI investigation.
+It does **not** make legal or definitive claims — always verify results manually.
+The purpose of this project is **transparency and responsible AI investigation**.
+
+
