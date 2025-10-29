@@ -36,99 +36,66 @@ It automates open-source intelligence (OSINT) research using AI agents that sear
 ]
 ⚙️ How It Works
 
-
 The user enters a company name (e.g., “Nestlé”, “Microsoft”, “L’Oréal”).
-
 
 The Researcher Agent uses web search tools (SerpAPI) to gather relevant evidence.
 
-
 The Verifier Agent cross-checks the findings and assigns confidence levels.
-
 
 The app outputs structured claims and allows exporting results as JSON.
 
-
-
 🧩 Tech Stack
-
 
 Python 3.10+
 
-
 Streamlit – Interactive UI
-
 
 CrewAI – Multi-agent orchestration
 
-
 OpenAI API – LLM reasoning & analysis
-
 
 SerpAPI – Web search integration
 
-
 dotenv – Secure API key management
-
-
 
 🛠 Setup Instructions (Local)
 1. Clone the repository
 git clone https://github.com/SoukainaGd/streamlit-AI-Agent-Investigator.git
 cd streamlit-AI-Agent-Investigator
-
 2. Create a virtual environment
 python -m venv venv
 source venv/bin/activate   # (Mac/Linux)
 venv\Scripts\activate      # (Windows)
-
 3. Install dependencies
 pip install -r requirements.txt
-
 4. Create a .env file
 OPENAI_API_KEY=your_openai_api_key_here
 SERPAPI_API_KEY=your_serpapi_api_key_here
-
 5. Run the app
 streamlit run app.py
-
-
 ☁️ Streamlit Cloud Deployment
+
 You can deploy this app to Streamlit Cloud.
 After connecting your GitHub repo, go to:
 Settings → Secrets and add:
 OPENAI_API_KEY = "your_openai_api_key_here"
 SERPAPI_API_KEY = "your_serpapi_api_key_here"
-
-
 🧭 Example Use Cases
-
 
 Investigate if a company has defense contracts
 
-
 Track partnerships linked to military or surveillance operations
-
 
 Examine supply chains with geopolitical implications
 
-
-
 👩‍💻 Author
+
 Soukaina Gadir
 AI & Data Science Researcher | OSINT Automation Enthusiast
 📍 GitHub: @SoukainaGd
 
 ⚖️ Disclaimer
+
 This tool uses publicly available information and AI-generated analysis.
 It does not make legal or definitive claims — always verify results manually.
 The purpose of this project is transparency and responsible AI investigation.
-
----
-
-After saving, click **Preview** — you’ll see proper headings, bullet lists, syntax-highlighted JSON, and emoji icons all aligned beautifully 🎨
-
----
-
-Would you like me to add a short **"Demo" section** at the top (with a link to your live Streamlit app + image preview)?  
-That makes your GitHub page look more professional.
